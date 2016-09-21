@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<style>
+		.loginBox {max-width:  90%; width: 500px }
+		.stretch input  {width: 100% } 
+	</style>
+</head>
+<body>
+	<div ng-app="BlankApp" ng-controller="AppCtrl as appCtrl" layout="column" ng-cloak layout-align="center center" layout-fill>		
+		<div layout="column" class="loginBox md-whiteframe-z1" >
+			<md-toolbar>
+				<h2 class="md-toolbar-tools"><span>Login</span></h2>
+			</md-toolbar>
+			<md-content	class="md-padding" layout="column">
+				<md-input-container>
+					<label>Email</label>
+					<input type="email" ng-model="user.email">
+				</md-input-container>
+				<md-input-container>
+					<label>Password</label>
+					<input type="password" ng-model="user.password">
+				</md-input-container>
+				<div layout="row" layout-align="center center" style="padding-top:20px;">
+					<md-button class="md-raised md-primary">Login</md-button>
+					<div flex></div>
+					<md-button href=""  md-no-ink> Forgot Password</md-button>
+				</div>
+			</md-content>
+		</div>
+	</div>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	<!-- Your application bootstrap  -->
+	<script type="text/javascript">
+		angular.module('BlankApp', ['ngMaterial'])
+		.controller('AppCtrl', function($scope){});
+	</script>
+
+</body>
+</html>
